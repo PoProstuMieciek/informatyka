@@ -1,0 +1,27 @@
+#pragma once
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#include "../token/Token.h"
+
+class Lexer
+{
+    public:
+        string text;
+        uint32_t pos;
+        char current_char;
+
+        Lexer(string text);
+
+        void nextChar();
+        void skipWhitespace();
+
+        double getNumber();
+        Token getNextToken();
+
+        bool isDigit();
+        bool isDecimalPoint();
+        bool isWhitespace();
+        bool notNULL();
+};
