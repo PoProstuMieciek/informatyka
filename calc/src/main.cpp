@@ -1,3 +1,5 @@
+// Copyright (C) 2021  Maciej Opaliński. All Rights Reserved.
+
 #include <bits/stdc++.h>
 using namespace std;
 
