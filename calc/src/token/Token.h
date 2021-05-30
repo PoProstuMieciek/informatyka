@@ -11,6 +11,7 @@ enum TokenType
     POWER,
     MULT,
     DIV,
+    MODULUS,
     ADD,
     SUB,
     INTEGER

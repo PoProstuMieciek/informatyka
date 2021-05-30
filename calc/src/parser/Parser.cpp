@@ -71,7 +71,7 @@ BinOp *Parser::term()
     // TERM: FACTOR ((MULT | DIV) FACTOR)*
     BinOp *node = factor();
 
-    while (current_token.type == POWER || current_token.type == MULT || current_token.type == DIV)
+    while (current_token.type == POWER || current_token.type == MULT || current_token.type == DIV || current_token.type == MODULUS)
     {
         if (current_token.type == POWER)
         {
@@ -87,6 +87,11 @@ BinOp *Parser::term()
         {
             eat(DIV);
             node = new BinOp(DIV, node, factor());
+        }
+        else if (current_token.type == MODULUS)
+        {
+            eat(MODULUS);
+            node = new BinOp(MODULUS, node, factor());
         }
     }
 

@@ -60,7 +60,7 @@ int main()
         if (input == "exit") exit(0);
         if (input == "help")
         {
-            printf("Operators: + - * / ! ? ^\n");
+            printf("Operators: + - * / ! ? ^ %\n");
             continue;
         }
 

@@ -55,6 +55,12 @@ double Evaluator::evaluate(BinOp *node)
         auto right = evaluate(node->right);
         return left / right;
     }
+    if (node->type == MODULUS)
+    {
+        auto left = evaluate(node->left);
+        auto right = evaluate(node->right);
+        return (int) left % (int) right;
+    }
     if (node->type == ADD)
     {
         auto left = evaluate(node->left);

@@ -59,6 +59,7 @@ Token Lexer::getNextToken()
         if (current_char == '^') { nextChar(); return Token(POWER, '^'); }
         if (current_char == '*') { nextChar(); return Token(MULT, '*'); }
         if (current_char == '/') { nextChar(); return Token(DIV, '/'); }
+        if (current_char == '%') { nextChar(); return Token(MODULUS, '%'); }
         if (current_char == '+') { nextChar(); return Token(ADD, '+'); }
         if (current_char == '-') { nextChar(); return Token(SUB, '-'); }
         if (current_char == '(') { nextChar(); return Token(L_PAREN, '('); }
