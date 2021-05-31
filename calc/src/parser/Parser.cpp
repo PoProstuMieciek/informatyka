@@ -6,6 +6,12 @@ BinOp::BinOp(TokenType type, double value)
     this->value = value;
 }
 
+BinOp::BinOp(TokenType type, string function_name)
+{
+    this->type = type;
+    this->function_name = function_name;
+}
+
 BinOp::BinOp(TokenType type, BinOp *left, BinOp *right)
 {
     this->type = type;
@@ -59,6 +65,17 @@ BinOp *Parser::factor()
         eat(L_PAREN);
         BinOp *node = expression();
         eat(R_PAREN);
+        return node;
+    }
+    else if (current_token.type == R_PAREN)
+    {
+        return new BinOp(__EOF, 0.0);
+    }
+    else if (current_token.type == FUNCTION)
+    {
+        BinOp *node = new BinOp(FUNCTION, current_token.function_name);
+        eat(FUNCTION);
+        node->left = factor();
         return node;
     }
 

@@ -8,12 +8,14 @@ using namespace std;
 class BinOp
 {
     public:
-        TokenType type;
+        TokenType type = __EOF;
         BinOp *left = nullptr;
         BinOp *right = nullptr;
-        double value;
+        double value = 0;
+        string function_name = "";
 
         BinOp(TokenType type, double value);
+        BinOp(TokenType type, string function_name);
         BinOp(TokenType type, BinOp *left = nullptr, BinOp *right = nullptr);
 };
 

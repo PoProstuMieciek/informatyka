@@ -42,6 +42,19 @@ double Lexer::getNumber()
     return atof(output.c_str());
 }
 
+string Lexer::getFunctionName()
+{
+    string output = "";
+
+    while (isAlphanumeric() && notNULL())
+    {
+        output += current_char;
+        nextChar();
+    }
+
+    return output;
+}
+
 Token Lexer::getNextToken()
 {
     while (notNULL())
@@ -65,6 +78,8 @@ Token Lexer::getNextToken()
         if (current_char == '(') { nextChar(); return Token(L_PAREN, '('); }
         if (current_char == ')') { nextChar(); return Token(R_PAREN, ')'); }
 
+        if (isAlphanumeric()) { return Token(FUNCTION, getFunctionName()); }
+
         printf("[ERROR] Invaid token '%c' on position %i.\n", current_char, pos);
         exit(1);
     }
@@ -72,9 +87,21 @@ Token Lexer::getNextToken()
     return Token(__EOF, (char) 0);
 }
 
+bool Lexer::isLetter()
+{
+    bool isLowercase = current_char >= 'a' && current_char <= 'z';
+    bool isUppercase = current_char >= 'A' && current_char <= 'Z';
+    return isLowercase || isUppercase;
+}
+
 bool Lexer::isDigit()
 {
     return current_char >= '0' && current_char <= '9';
+}
+
+bool Lexer::isAlphanumeric()
+{
+    return isLetter() || isDigit();
 }
 
 bool Lexer::isDecimalPoint()

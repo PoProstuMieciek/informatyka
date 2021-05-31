@@ -73,6 +73,22 @@ double Evaluator::evaluate(BinOp *node)
         auto right = evaluate(node->right);
         return left - right;
     }
+    if (node->type == FUNCTION)
+    {
+        auto left = evaluate(node->left);
+        return evaluate_function(node->function_name, left);
+    }
 
     return 0;
+}
+
+double Evaluator::evaluate_function(string function_name, double arg1)
+{
+    if (function_name == "sin") return sin(arg1);
+    if (function_name == "cos") return cos(arg1);
+    if (function_name == "tan") return tan(arg1);
+    if (function_name == "pi") return M_PI;
+
+    printf("[ERROR] Invalid function call. Function with name '%s' does not exist.\n", function_name.c_str());
+    exit(1);
 }

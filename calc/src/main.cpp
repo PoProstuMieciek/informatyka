@@ -18,6 +18,7 @@ const char *enumToType(TokenType type)
     if (type == ADD) return "ADD";
     if (type == SUB) return "SUB";
     if (type == INTEGER) return "INTEGER";
+    if (type == FUNCTION) return "FUNCTION";
 
     return "NULL";
 }
@@ -60,7 +61,7 @@ int main()
         if (input == "exit") exit(0);
         if (input == "help")
         {
-            printf("Operators: + - * / ! ? ^ %%\n");
+            printf("Operators: + - * / ! ? ^ %% sin() cos() tan() pi()\n");
             continue;
         }
 

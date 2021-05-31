@@ -13,6 +13,7 @@ class Evaluator
         Evaluator(Parser *parser);
 
         double evaluate(BinOp *node);
+        double evaluate_function(string function_name, double arg1);
 
         double factorial(int n);
         double nth_triangle_number(int n);

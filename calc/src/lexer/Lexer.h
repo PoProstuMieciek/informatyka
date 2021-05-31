@@ -18,9 +18,12 @@ class Lexer
         void skipWhitespace();
 
         double getNumber();
+        string getFunctionName();
         Token getNextToken();
 
+        bool isLetter();
         bool isDigit();
+        bool isAlphanumeric();
         bool isDecimalPoint();
         bool isWhitespace();
         bool notNULL();

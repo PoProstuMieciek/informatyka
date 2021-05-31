@@ -1,5 +1,8 @@
 #pragma once
 
+#include <string>
+using std::string;
+
 enum TokenType
 {
     __EOF,
@@ -14,7 +17,8 @@ enum TokenType
     MODULUS,
     ADD,
     SUB,
-    INTEGER
+    INTEGER,
+    FUNCTION
 };
 
 class Token
@@ -23,7 +27,9 @@ class Token
         TokenType type;
         char symbol;
         double value;
+        string function_name;
 
         Token(TokenType type, double value);
-        Token(TokenType type, char symbol);
+        Token(TokenType type, char binop_symbol);
+        Token(TokenType type, string function_name);
 };

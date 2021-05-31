@@ -11,3 +11,9 @@ Token::Token(TokenType type, char symbol)
     this->type = type;
     this->symbol = symbol;
 }
+
+Token::Token(TokenType type, string function_name)
+{
+    this->type = type;
+    this->function_name = function_name;
+}
