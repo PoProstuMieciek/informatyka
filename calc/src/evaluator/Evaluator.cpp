@@ -90,6 +90,8 @@ double Evaluator::evaluate_function(string function_name, double arg1)
     if (function_name == "pi") return M_PI;
     if (function_name == "rad") return arg1 * (M_PI / 180.0);
     if (function_name == "deg") return arg1 * (180.0 / M_PI);
+    if (function_name == "sqrt") return sqrt(arg1);
+    if (function_name == "cbrt") return cbrt(arg1);
 
     printf("[ERROR] Invalid function call. Function with name '%s' does not exist.\n", function_name.c_str());
     exit(1);
