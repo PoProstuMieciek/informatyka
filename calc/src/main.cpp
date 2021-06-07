@@ -61,7 +61,8 @@ int main()
         if (input == "exit") exit(0);
         if (input == "help")
         {
-            printf("Operators: + - * / ! ? ^ %% sin() cos() tan() pi() rad() deg()\n");
+            printf("Operators: + - * / ! ? ^ %%/n");
+            printf("Functions: sin() cos() tan() pi() rad() deg() sqrt() cbrt()\n");
             continue;
         }
 
