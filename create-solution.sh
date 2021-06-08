@@ -6,5 +6,5 @@ cd $name/
 mkdir src/
 touch src/main.cpp
 
-cp ../Makefile ./
+cp ../Makefile.template ./Makefile
 sed -i "s/SOLUTION_NAME/${name,,}/" Makefile
