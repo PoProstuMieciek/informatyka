@@ -1,4 +1,4 @@
-TARGET := ./bin/napisy_pierwsze.o
+TARGET := ./bin/prime_strings.o
 CXX := g++
 CXXFLAGS := -std=c++11 -Wall -Wextra -Wno-unused-parameter -Wno-unused-result -g
 LDFLAGS := 
