@@ -3,7 +3,7 @@ using namespace std;
 
 const int MAX_N = 1e8;
 
-// checked   => complex
+// checked   => not prime
 // unchecked => prime
 bool sieve[MAX_N];
 
@@ -42,13 +42,13 @@ int main()
 
     user_input:
 
-    printf("[INFO] Podaj liczbę: ");
+    printf("[INFO] Enter number: ");
     scanf("%i", &n);
 
     if (n <= 1) goto user_input;
 
     gen_sieve();
 
-    printf(is_prime(n) ? "[INFO] Liczba %i jest pierwsza!" : "[INFO] Liczba %i jest złożona.", n);
+    printf(is_prime(n) ? "[INFO] %i is a prime!" : "[INFO] %i is not a prime.", n);
     printf("\n");
 }
