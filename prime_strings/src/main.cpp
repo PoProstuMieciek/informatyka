@@ -20,7 +20,7 @@ bool gen_sieve(size_t limit = MAX_N)
         if(!sieve[i])
         {
             // check all multiples
-            for (int j = i*i; j < limit; j += i)
+            for (size_t j = i*i; j < limit; j += i)
             {
                 sieve[j] = true;
             }
