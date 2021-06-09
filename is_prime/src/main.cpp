@@ -24,7 +24,7 @@ bool gen_sieve(size_t limit = MAX_N)
             }
         }
 
-        printf("[DEBUG] Removed all multiples of %i\n", i);
+        printf("[DEBUG] Removed all multiples of %li\n", i);
     }
 
     return true;
