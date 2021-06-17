@@ -93,6 +93,6 @@ double Evaluator::evaluate_function(string function_name, double arg1)
     if (function_name == "sqrt") return sqrt(arg1);
     if (function_name == "cbrt") return cbrt(arg1);
 
-    printf("[ERROR] Invalid function call. Function with name '%s' does not exist.\n", function_name.c_str());
-    exit(1);
+    printf("[WARN] Invalid function call. Function with name '%s' does not exist. Assuming it is equal 0.\n", function_name.c_str());
+    return 0;
 }

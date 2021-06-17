@@ -81,7 +81,7 @@ Token Lexer::getNextToken()
         if (isAlphanumeric()) { return Token(FUNCTION, getFunctionName()); }
 
         printf("[ERROR] Invaid token '%c' on position %i.\n", current_char, pos);
-        exit(1);
+        break;
     }
 
     return Token(__EOF, (char) 0);

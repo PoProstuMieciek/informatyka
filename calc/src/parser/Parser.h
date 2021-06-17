@@ -17,6 +17,9 @@ class BinOp
         BinOp(TokenType type, double value);
         BinOp(TokenType type, string function_name);
         BinOp(TokenType type, BinOp *left = nullptr, BinOp *right = nullptr);
+
+        const char *typeToString();
+        void debug(int index = 1);
 };
 
 class Parser
@@ -27,7 +30,7 @@ class Parser
 
         Parser(Lexer *lexer);
 
-        void eat(TokenType token_type);
+        bool eat(TokenType token_type);
 
         BinOp *factor();
         BinOp *term();
