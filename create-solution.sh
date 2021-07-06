@@ -18,4 +18,5 @@ cp $root/.templates/Makefile.template ./Makefile
 sed -i "s/SOLUTION_NAME/${solution_name,,}/" ./Makefile
 sed -i "s/SOLUTION_NAME/${solution_name,,}/" ./test/test.sh
 
+code ./src/main.cpp
 pwd
