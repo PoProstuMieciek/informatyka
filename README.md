@@ -9,6 +9,7 @@ Learning materials for everyone to learn basic concepts of programming.
 * power (iteration & recursion)
 * primitive_sort (iteration & recursion)
 * bubble_sort
+* drawings
 * multiplication_table
 
 ## Intermediate
