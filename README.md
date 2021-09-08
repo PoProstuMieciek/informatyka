@@ -11,6 +11,7 @@ Learning materials for everyone to learn basic concepts of programming.
 * bubble_sort
 * drawings
 * multiplication_table
+* ujasia (bruteforce)
 
 ## Intermediate
 * is_prime
