@@ -4,72 +4,32 @@
 #include <string.h>
 using namespace std;
 
-void print_candles(bool *candles, uint32_t age)
+uint64_t highest_power_of_2(uint64_t n)
 {
-    for (uint32_t i = 1; i <= age; i++)
+    uint64_t result = 1;
+    while (result <= n)
     {
-        printf("%d ", candles[i]);
+        result <<= 1;
     }
-    printf("\n");
-}
-
-uint32_t candles_left(bool *candles, uint32_t age)
-{
-    uint32_t result = 0;
-
-    for (uint32_t i = 1; i <= age; i++)
-    {
-        result += candles[i];
-    }
-
+    result >>= 1;
     return result;
 }
 
-uint32_t get_first_lighted_candle(bool *candles, uint32_t age)
+int get_last_candle(int age)
 {
-    for (uint32_t i = 1; i <= age; i++)
-    {
-        if (candles[i]) return i;
-    }
-    return 0;
-}
+    uint64_t h_pow2 = highest_power_of_2(age);
 
-uint32_t get_last_candle(uint32_t age)
-{
-    bool *candles = (bool *) calloc(age + 2, 1);
-    memset(candles + 1, true, age);
-
-    bool put_out_candle = false;
-    while (candles_left(candles, age) > 1)
-    {
-        // bool put_out_candle = false;
-        for (uint32_t i = 1; i <= age; i++)
-        {
-            if (!candles[i]) continue;
-            else if (put_out_candle)
-            {
-                candles[i] = 0;
-            }
-            put_out_candle = !put_out_candle;
-        }
-
-        // print_candles(candles, age);
-    }
-
-    uint32_t last_candle = get_first_lighted_candle(candles, age);
-    free(candles);
-
-    return last_candle;
+    return 2 * (age - h_pow2) + 1;
 }
 
 void solve()
 {
-    uint32_t queries;
+    int queries;
     scanf("%d", &queries);
 
-    for (uint32_t i = 0; i < queries; i++)
+    for (int i = 0; i < queries; i++)
     {
-        uint32_t age;
+        int age;
         scanf("%d", &age);
 
         printf("%d\n", get_last_candle(age));

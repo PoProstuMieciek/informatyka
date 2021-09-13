@@ -5,6 +5,12 @@
 using namespace std;
 using namespace testing;
 
+TEST(highest_power_of_2, simple)
+{
+    ASSERT_EQ(8, highest_power_of_2(9));
+    ASSERT_EQ(64, highest_power_of_2(64));
+}
+
 TEST(get_last_candle, examples)
 {
     ASSERT_EQ(1, get_last_candle(2));
