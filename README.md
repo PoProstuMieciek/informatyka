@@ -7,6 +7,7 @@ Learning materials for everyone to learn basic concepts of programming.
 * nth_triangle_number (iteration & recursion)
 * factorial (iteration & recursion)
 * power (iteration & recursion)
+* quadratic_function (calculating delta)
 * primitive_sort (iteration & recursion)
 * bubble_sort
 * drawings
