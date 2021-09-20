@@ -15,6 +15,7 @@ Learning materials for everyone to learn basic concepts of programming.
 * ujasia (bruteforce)
 
 ## Intermediate
+* pesel (multiple files, classes)
 * is_prime
 * prime_strings
 * invert_bin_tree
