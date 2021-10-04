@@ -15,6 +15,7 @@ Learning materials for everyone to learn basic concepts of programming.
 * ujasia (bruteforce)
 
 ## Intermediate
+* quiz (c strings, arrays, string comparison)
 * pesel (multiple files, classes)
 * is_prime
 * prime_strings
