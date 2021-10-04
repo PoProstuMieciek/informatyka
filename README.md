@@ -23,6 +23,7 @@ Learning materials for everyone to learn basic concepts of programming.
 
 ## Advanced
 * calc
+* sfml_game (Graphical User Interface library, basic game, player movement)
 
 ## Warning
 If you get confused with me using:  
