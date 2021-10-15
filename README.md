@@ -14,6 +14,7 @@ Learning materials for everyone to learn basic concepts of programming.
 * multiplication_table
 * ujasia (bruteforce)
 * functions_1
+* functions_2
 
 ## Intermediate
 * quiz (c strings, arrays, string comparison)
