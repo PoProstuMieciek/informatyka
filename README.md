@@ -19,6 +19,7 @@ Learning materials for everyone to learn basic concepts of programming.
 ## Intermediate
 * quiz (c strings, arrays, string comparison)
 * pesel (multiple files, classes)
+* numbers
 * is_prime
 * prime_strings
 * invert_bin_tree
